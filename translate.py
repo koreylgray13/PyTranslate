@@ -1,19 +1,24 @@
 import deepl
 import sys
 
-auth_key = "YOUR/API/KEY"  # Replace with your key
+# Your DeepL API Key
+auth_key = "YOUR/API/KEY"
+
+# Initialize Translator
 translator = deepl.Translator(auth_key)
 
-
+# English To Spanish Func
 def toSpanish():
     while True:
         inp = input("\nEnglish:   ")   
+        # Quit Function
         if inp == "q":
             break
         else:   
             translation = translator.translate_text(inp, source_lang="EN", target_lang="ES")
             print("Spanish:  ", translation.text)
 
+# Spanish To English Func
 def toEnglish():
     while True:
         inp = input("\nSpanish:   ")   
@@ -23,11 +28,14 @@ def toEnglish():
             translation = translator.translate_text(inp, source_lang="ES", target_lang="EN-US")
             print("English:  ", translation.text)
 
+# Language Detection Func
 def detectLang():
     while True:
         inp = input("Detect Language: ")
+        # Quit Function
         if inp == 'q':
             break
+        # Break if no input given
         elif inp == '':
             print("No Input Detected, exiting.")
             break
@@ -36,6 +44,7 @@ def detectLang():
             print(lang.detected_source_lang)
 
 
+# Custom Language Translation
 def customTranslate():
     print("""
 Available Languages:
@@ -69,6 +78,7 @@ UK - Ukrainian
 ZH - Chinese
     """)
     
+    # Language Selection Input
     fromLang = input("Translate From: ")
     toLang = input("Translate To: ")
     
@@ -83,6 +93,7 @@ ZH - Chinese
             translation = translator.translate_text(inp, source_lang=fromLang, target_lang=toLang)
             print(f"{toLang}:  ", translation.text)
 
+# Run Program 
 while True:
     start = input("""
 
