@@ -1,5 +1,5 @@
 # PyTranslate
-Translator using Python &amp; DeepL API. Includes language detection. 27 Labnguages currently to choose from.
+Translator using Python &amp; DeepL API. Includes language detection. 27 Languages currently to choose from.
 
 Work in progress towards language chatbot for better learning.
 
