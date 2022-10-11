@@ -1,6 +1,8 @@
 # PyTranslate
 Translator using Python &amp; DeepL API. Includes language detection. 27 Languages currently to choose from.
 
+DeepL Site: https://www.deepl.com/pro-api?cta=header-pro-api/
+
 Work in progress towards language chatbot for better learning.
 
 
